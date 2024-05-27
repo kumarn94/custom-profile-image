@@ -1,0 +1,15 @@
+{
+    "name": "custom/profile-image",
+	"version": "1.0.0",
+	"type": "plugin",
+    "description": "The Custom Profile Image Plugin lets users upload their own profile images or use their Gravatar. It allows easy image management and switching between custom and Gravatar images.",
+    "keywords": ["custom-profile-image"],
+    "autoload": {
+        "classmap": [
+            "includes"
+        ],
+        "files": [
+            "helpers/helpers.php"
+        ]
+    }
+}   
