@@ -45,8 +45,6 @@ if (!class_exists('JS')){
              },
              library: {
                  type: ['image/JPEG', 'image/PNG'],
-                 author: <?php echo AuthorProfileIMG::current_user(); ?>,
-                 /* custom_var: 'profile_image', */
              },
              multiple: false
          });
@@ -83,10 +81,10 @@ if (!class_exists('JS')){
         jQuery(".cpi-video-poster-wrap").find("input[name='profile_image_input']").val('');
 
         jQuery.ajax( {
-        url: '<?php  echo rest_url('user/dp'); ?>',
+        url: '<?php  echo esc_url(rest_url('user/dp')); ?>',
         method: 'POST',
         beforeSend: function ( xhr ) {
-            xhr.setRequestHeader( 'X-WP-Nonce', '<?php echo wp_create_nonce( 'wp_rest' ); ?>' );
+            xhr.setRequestHeader( 'X-WP-Nonce', '<?php echo esc_js(wp_create_nonce( 'wp_rest' )); ?>' );
         },
         data:{
             'user_id' : jQuery(it).data('user-id'),

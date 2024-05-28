@@ -40,8 +40,6 @@ if (!class_exists('Main')){
 
              add_action( 'admin_enqueue_scripts', array('Includes\JS', 'profile_img_assets') );
             
-           //  add_filter( 'ajax_query_attachments_args', array('Includes\AuthorProfileIMG', 'webhead_ajax_query_attachments_args'),999 );
- 
          }
 
          public static function instance() {

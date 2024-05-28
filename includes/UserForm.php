@@ -24,7 +24,7 @@ if (!class_exists('UserForm')){
                         <div class="cpi-video-poster-wrap">
                             <p class="video-poster-img">
                                 <div class="box">
-                                    <button type="button" class="delete" style="'.$none.'" title ="Remove local avatar" onclick="removeDP(this)" data-user-id="'.$user_id.'">
+                                    <button type="button" class="delete" style="'.esc_attr($none).'" title ="Remove local avatar" onclick="removeDP(this)" data-user-id="'.esc_attr($user_id).'">
                                         <span>&times;</span>
                                     </button>
                                     <div class="image">

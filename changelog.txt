@@ -1,0 +1,6 @@
+=== Custom Profile Image ===
+
+== Archived Changelog Entries ==
+
+This file contains older changelog entries, so we can keep the size of the standard WordPress readme.txt file reasonable.
+For the la

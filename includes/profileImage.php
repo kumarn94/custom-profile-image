@@ -6,30 +6,7 @@ use Helpers\Helper;
  if (!class_exists('AuthorProfileIMG')){
      final class AuthorProfileIMG
      {
-         private static $instance = null;
- 
-         public static function webhead_ajax_query_attachments_args($args) {
- 
-             if(!empty($_REQUEST['query']['author']) && $_REQUEST['query']['author']==self::current_user()){
-                 $args['meta_query'] = [
-                     [
-                         'key'     => 'profile_image',
-                         'value'     => 1,
-                         'compare' => '=',
-                     ]
-                 ];
-             }else{
-                 $args['meta_query'] = [
-                     [
-                         'key'     => 'profile_image',
-                         'value'     => 1,
-                         'compare' => 'NOT EXISTS',
-                     ]
-                 ];
-             }
-             
-             return $args;
-         }            
+         private static $instance = null;           
  
          public static function current_user(){ 
              if ( is_user_logged_in() ) {
@@ -46,9 +23,6 @@ use Helpers\Helper;
  
              return $user_id;
          }
-
-         
-
 
      }
  

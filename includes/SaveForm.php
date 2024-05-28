@@ -14,15 +14,11 @@ if (!class_exists('SaveForm')){
             if ( !current_user_can( 'edit_user', $user_id ) )
                 return false;
 
-                if(!empty($_POST['profile_image_input'])){
+                if(!empty($_POST['profile_image_input'])  || ! wp_verify_nonce( $_POST['profile_image_input'], '_wpnonce' )){
                    update_user_meta( $user_id, 'profile_image', $_POST['profile_image_input'] );
                 }else{
                    update_user_meta( $user_id, 'profile_image', '' );
                 }
-            
-               if(!empty($_POST['profile_image_input'])){
-                   update_post_meta( $_POST['profile_image_input'], 'profile_image', 1);
-               } 
         }
 
     }
